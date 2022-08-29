@@ -1,0 +1,46 @@
+<div class="col-md-6 offset-md-3">
+    <div class="hero-shape">
+        <marquee behaviour="scroll" direction="left">       
+  <img src="https://th.bing.com/th/id/OIP.KWie5pU1jHpNn3ETUD4M4QHaEK?w=257&h=180&c=7&r=0&o=5&pid=1.7" alt="" class="shape">
+</marquee>      
+</div> 
+    <h3 style="color:brown;text-align:center;font-style: italic;"> Create Doctor </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label style="color:blue;font-size:larger"> Name</label>
+            <input type="text" class ="form-control" id = "Name"
+                [(ngModel)] = "doctor.name" name = "Name">
+        </div>
+        <div class="form-group">
+            <label style="color:blue;font-size:larger"> Age</label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "doctor.age" name = "age">
+        </div>
+        <div class="form-group">
+            <label for="gender" style="color:blue;font-size:larger">Gender:</label>
+            <div>
+                <div>
+                    <input id="Male" type="radio" value="Male" [(ngModel)] = "doctor.gender" name="gender" >
+                    <label for="Male" style="color:maroon">Male</label>
+                </div>
+                <div>
+                    <input id="Female" type="radio" value="Female" [(ngModel)] = "doctor.gender" name="gender">
+                    <label for="Female" style="color:maroon">Female</label>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label style="color:blue;font-size:larger"> Specialist</label>
+                <input type="text" class ="form-control" id = "specialist"
+                    [(ngModel)] = "doctor.specialist" name = "specialist">
+            </div>
+            <div class="form-group">
+                <label style="color:blue;font-size:larger"> Patients attended</label>
+                <input type="number" class ="form-control" id = "patients"
+                    [(ngModel)] = "doctor.numberOfPatients" name = "patients">
+            </div>
+    
+        <button class = "btn btn-success" type ="submit" style="margin-left:40%;padding-left:5%;padding-right: 5%;margin-top: 2%;">Submit</button>
+    </form>
+    </div>

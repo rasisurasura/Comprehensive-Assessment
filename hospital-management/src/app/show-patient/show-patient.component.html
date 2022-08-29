@@ -1,0 +1,54 @@
+<div className="App">
+    <section id="home" class="hero-section">
+      <div class="hero-shape">
+        <marquee behaviour="scroll" direction="left"> 
+        <img src="https://th.bing.com/th/id/OIP.KWie5pU1jHpNn3ETUD4M4QHaEK?w=257&h=180&c=7&r=0&o=5&pid=1.7" alt="" class="shape" style="padding-left:40%">
+      </marquee>
+      </div>
+      <div class="container">
+       
+                <h4 style="text-align: center ;font-style:italic ; color:brown;"> Patient Details</h4>
+                
+                <div class="table-wrapper" style="margin-left: 40%;width:fit-content;">
+                  <input  type="text"  placeholder="Please Enter The Id" [(ngModel)]="patientId">
+                <button type="submit" (click)="getPatientDetails(patientId)" style="color:azure;background-color: green;">Enter</button>
+                  <table class="fl-table">
+                    <thead style="font-style:italic">
+                      <tr>
+                        <th>Patient Id</th>
+                        <th>Age</th>
+                        <th>Patient Name</th>
+                        <th>Date of Visit</th>
+                        <th>Visited Doctor</th>
+                        <th>Precription</th>
+                        <!--<th>Doctor's ID</th>-->
+                        <!-- <th>Delete</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                        <td>{{ patients.id}}</td>
+                        <td>{{ patients.age}}</td>
+                        <td>{{ patients.name }}</td>
+                        <td>{{ patients.dateOfVisit }}</td>
+                        <td>{{ patients.visitedDoctor }}</td>
+                        <td>{{ patients.prescription }}</td>
+                       <!-- <td>{{ patients.doctId}}</td>-->
+                         <!-- <td class="text-center"><button class="btn btn-danger btn-xs btn-left-mr" (click)="deletePatient(patients.patient.patientId)" ><span class="glyphicon glyphicon-remove" ></span> Delete</button></td> -->
+                      </tr>
+                    </tbody>
+  
+                    <tbody></tbody>
+                  </table>
+                  <button type="submit" (click)="back()" style="background-color: green;color:azure">Back</button>
+                </div>
+                
+              </div>
+              
+  
+         
+    </section>
+  </div>
+  
+  
+  

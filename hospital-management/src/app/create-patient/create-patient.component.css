@@ -1,0 +1,44 @@
+
+  .self_margin{
+    margin-top: -108px;
+  }
+  .item_center p{
+
+    text-align: center;
+    padding-top: 13px;
+  }
+  .footer{
+    height: 50px;
+  
+  }
+  .reg-btn{
+    background-color: green;
+    margin-top: 10px;
+ }
+  .reg-btn:hover{
+     background-color: green;
+  }
+  /*.form-group{
+    background-color:lightcyan;
+    max-width: 100%;
+    table-layout:center;
+    text-align: left;
+margin-left:auto;
+margin-right:auto;
+
+   
+  }*/
+  .h1{
+    text-align:right;
+  }
+  .form-group{
+    background-color:lightpink;
+    max-width: 90%;
+    table-layout:30px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    
+   
+}

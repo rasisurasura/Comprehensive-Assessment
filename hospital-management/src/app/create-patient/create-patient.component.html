@@ -1,0 +1,82 @@
+<div className="App">
+  
+
+  <section id="home" class="hero-section">
+    <div class="hero-shape">
+      <marquee behaviour="scroll" direction="right"> 
+      <img src="https://www.bing.com/th?id=OIP.2SwG--G-xD2W75IKou5YJwHaD4&w=345&h=180&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="" class="shape" style="padding-left: 30%;">
+      </marquee>
+    </div>
+    <div style="text-align: center">
+      <h3 style="color: brown;">{{message}}</h3>
+  </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-content">
+
+            <form >
+              <div class=" text-center ">
+                  <h1 style="padding-bottom:5% ;color: brown;font-size:xx-large;font-style: oblique;">Patient Registration </h1>
+              </div>
+              <fieldset>
+                 
+
+                  <div class="form-group">
+                      <label for="Name"><span class="req"> </span><strong> Name</strong>: </label>
+                      <input required type="text" [(ngModel)]="patient.name"  name="patientName" id="patientName"
+                          class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                  </div>
+                  <div class="form-group">
+                    <label for="Age"><span class="req"></span> <strong>Age:</strong>  </label>
+                    <input class="form-control" type="number"[(ngModel)]="patient.age"   name="age" id="age" required
+                        placeholder="Enter Age" />
+                    
+                </div>
+
+                  <div class="form-group">
+                      <label for="dateOfVisit"><span class="req"> </span><strong> Date of Visit </strong>:</label>
+                      <input required type="date" [(ngModel)]="patient.dateOfVisit"  name="dateOfVisit" id="dateOfVisit"
+                          class="form-control phone" maxlength="28" placeholder="Enter date of vist..." />
+                  </div>
+                  <div class="form-group">
+                      <label for="visitedDoctor"><span class="req"> </span><strong>Select Vistited Doctor </strong>:</label>
+
+                      <select class="hideLabel form-control" [(ngModel)]="patient.visitedDoctor" name="Id" (change)="selectName(patient.doctorId);">  
+                        <option selected="" value=""></option>  
+                     <option [ngValue]="k.name" *ngFor="let k of doctors">  
+                         {{k.name}}  
+                  </option>  
+             </select> 
+                      <!-- <input required type="text" [(ngModel)]="patient.visitedDoctor"  name="visitedDoctor" id="visitedDoctor"
+                          class="form-control phone" maxlength="28" placeholder="Select Doctors Name.." /> -->
+                  </div>
+                  <div class="form-group">
+                      <label for="precription"><span class="req"> </span><strong> Prescription </strong>:</label>
+                      <input required type="text" [(ngModel)]="patient.prescription"  name="precription" id="precription"
+                          class="form-control phone" maxlength="28" placeholder="Enter Speciality..." />
+                  </div>
+
+                  <div class="form-group">
+                      <label for="doctId"><span class="req"></span> <strong>Doctors Id:</strong>  </label>
+                      <input class="form-control" type="number"[(ngModel)]="patient.doctorId"   name="doctId" id="doctId" required
+                          placeholder="Enter Doctors ID" />
+                      
+                  </div>
+
+                  <div class="form-group">
+                      <input class="btn btn-success main-btn reg-btn" type="submit" name="submit_reg" value="Register" (click)="registerPatNow()" >
+                  </div>
+              </fieldset>
+          </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+            <img src="assets/downloads(1).jpeg" style="height: 100vh;" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

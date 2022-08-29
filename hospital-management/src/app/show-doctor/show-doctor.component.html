@@ -1,0 +1,65 @@
+<div className="App">
+    <header class="header">
+      <div class="navbar-area">
+        <div class="container">
+    <div class="row align-items-center">
+    <section id="home" class="hero-section">
+     <div class="hero-shape">
+      <marquee behaviour="scroll" direction="left"> 
+        <img src="https://th.bing.com/th/id/OIP.KWie5pU1jHpNn3ETUD4M4QHaEK?w=257&h=180&c=7&r=0&o=5&pid=1.7" alt="" class="shape" style="padding-left:50%;"/>
+    </marquee>
+      </div> 
+      <div class="container">
+       
+                <h4 style="text-align: center;font-style: italic;color: brown;"> Doctor Details</h4>
+                <div class="table-wrapper"style="width=fit-content;margin-left:10%;padding-left:18%">
+                  <span style="font-style: italic;">Please  choose doctor</span> 
+                  <select class="hideLabel form-control" [(ngModel)]="doctId" name="Id" (change)="selectName(doctId);">  
+                    <option selected="" value=""></option>  
+                 <option [ngValue]="k.id" *ngFor="let k of doctors">  
+                     {{k.name}}  
+              </option>  
+         </select> 
+         <div *ngIf="doctorflag">
+                  <table class="fl-table" style="width: fit-content;">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <!--<th>Age</th>
+                        <th>Gender</th>-->
+                        <th>Speciality</th>
+                        <th>Patient Attended</th>
+                        <!-- <th>Delete</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{ doctorinfo.id }}</td>
+                        <td>{{ doctorinfo.name }}</td>
+                        <!--<td>{{ doctorinfo.age }}</td>
+                        <td>{{ doctorinfo.gender }}</td>-->
+                        <td>{{ doctorinfo.specialist }}</td>
+                        <td>{{ doctorinfo.numberOfPatients }}</td>
+                        
+                       
+  
+                         <!-- <td class="text-center"><button class="btn btn-danger btn-xs btn-left-mr" (click)="deleteDoctor(doctorinfo.doctId)" ><span class="glyphicon glyphicon-remove" ></span> Delete</button></td> -->
+                      </tr>
+                    </tbody>
+  
+                    <tbody></tbody>
+                  </table>
+                  
+                  </div>
+                </div>
+                <button type="submit" (click)="back()">Back</button>
+              </div>
+              
+  
+         
+    </section>
+  </div>
+  
+  
+  
